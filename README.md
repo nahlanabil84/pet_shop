@@ -17,3 +17,5 @@ A new Flutter project. Implementation of LuckyPet E-Commerce mobile app designed
 
 ## Screenshots
 [<img src="assets/images/main_screen.jpg" align="left" width="200" hspace="10" vspace="10">](assets/images/main_screen.jpg)
+[<img src="assets/images/details_screen1.jpg" align="left" width="200" hspace="10" vspace="10">](assets/images/details_screen1.jpg)
+[<img src="assets/images/details_screen2.jpg" align="left" width="200" hspace="10" vspace="10">](assets/images/details_screen2.jpg)

@@ -39,3 +39,6 @@ final fontSourceSansProBold = GoogleFonts.sourceSansPro(
 final fontSourceSansProBlack = GoogleFonts.sourceSansPro(
   fontWeight: FontWeight.w700,
 );
+
+const longText =
+    "Remember this sweet face? Several years ago Charlie came into our care when their person died. These two easy-going Lhasa Apso mixes quickly to settle into foster care. Living with kids, cats, and other dogs, they were the perfect guests, and once their vetting and evaluation was done this bonded pair found their home with a kind couple.";
