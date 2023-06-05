@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/styles.dart';
+
+import '../widgets/create_gap.dart';
 
 class WelcomeMessageWidget extends StatelessWidget {
   const WelcomeMessageWidget({
@@ -11,21 +14,21 @@ class WelcomeMessageWidget extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(
-            left: 15.0,
+          padding: EdgeInsets.only(
+            left: 15.w,
           ),
           child: Card(
             color: colorWelcomeCardBackground,
-            shape: const RoundedRectangleBorder(
+            shape: RoundedRectangleBorder(
               borderRadius:
-              BorderRadius.all(Radius.circular(30)),
+              BorderRadius.all(Radius.circular(30.r)),
             ),
             child: SizedBox(
-              height: 120.0,
+              height: 130.h,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.only(
-                    left: 110.0, right: 10.0),
+                padding: EdgeInsets.only(
+                    left: 110.w, right: 10.w),
                 child: Column(
                     crossAxisAlignment:
                     CrossAxisAlignment.start,
@@ -38,7 +41,7 @@ class WelcomeMessageWidget extends StatelessWidget {
                             "Hello ",
                             style: fontSourceSansProLight
                                 .copyWith(
-                              fontSize: 18.0,
+                              fontSize: 18.sp,
                               color: colorBlack,
                             ),
                           ),
@@ -46,19 +49,17 @@ class WelcomeMessageWidget extends StatelessWidget {
                             "Nahla 👋",
                             style: fontSourceSansProBold
                                 .copyWith(
-                              fontSize: 18.0,
+                              fontSize: 18.sp,
                               color: colorBlack,
                             ),
                           )
                         ],
                       ),
-                      const SizedBox(
-                        height: 5.0,
-                      ),
+                      buildGap(5.h),
                       Text(
                         "Ready for an amazing and lucky experience 🐈🐕‍",
                         style: fontSourceSansPro.copyWith(
-                          fontSize: 16.0,
+                          fontSize: 16.sp,
                           color: colorBlack,
                         ),
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Row buildPhotoAlbumList(List animal, int itemIndex){
   return Row(
@@ -13,10 +14,10 @@ Row buildPhotoAlbumList(List animal, int itemIndex){
 
 ClipRRect buildPhotoClipRRect(List animal, int itemIndex, int item) {
   return ClipRRect(
-    borderRadius: BorderRadius.circular(10.0),
+    borderRadius: BorderRadius.circular(10.r),
     child: Image.asset(
       animal[itemIndex]["album"][item].toString(),
-      width: 90,
+      width: 90.w,
       fit: BoxFit.contain,
     ),
   );

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'animal_list_item.dart';
 
 Container buildAnimalListContainer(List animal) {
   return Container(
-    height: 175.0,
-    margin: const EdgeInsets.only(left: 12.0),
+    height: 180.h,
+    margin: EdgeInsets.only(left: 12.w),
     child: ListView.builder(
       itemCount: animal.length,
       scrollDirection: Axis.horizontal,

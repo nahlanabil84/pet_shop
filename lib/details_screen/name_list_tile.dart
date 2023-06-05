@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/styles.dart';
+
+import '../widgets/create_gap.dart';
 
 ListTile buildNameListTile(String animalName, String animalFrom) {
   return ListTile(
@@ -8,17 +11,15 @@ ListTile buildNameListTile(String animalName, String animalFrom) {
           color: colorDarkGrey, fontSize: 20.0),
     ),
     subtitle: Padding(
-      padding: const EdgeInsets.only(top: 5.0),
+      padding: EdgeInsets.only(top: 5.h),
       child: Row(
         children: [
-          const Icon(
+          Icon(
             Icons.location_on_outlined,
-            size: 16.0,
+            size: 16.h,
             color: colorLightGrey,
           ),
-          const SizedBox(
-            width: 5.0,
-          ),
+          buildGap(5.h),
           Text(animalFrom,
             style: fontSourceSansPro.copyWith(
                 color: colorLightGrey),
@@ -26,9 +27,9 @@ ListTile buildNameListTile(String animalName, String animalFrom) {
         ],
       ),
     ),
-    trailing: const Icon(
+    trailing: Icon(
       Icons.favorite_outline,
-      size: 30.0,
+      size: 30.h,
       color: colorOrange,
     ),
   );

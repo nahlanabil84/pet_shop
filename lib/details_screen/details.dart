@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/styles.dart';
 
+import '../widgets/create_gap.dart';
 import 'details_cards_list.dart';
 import 'photo_album_list.dart';
 import 'extended_floating_action_button.dart';
@@ -27,7 +29,7 @@ class DetailsScreen extends StatelessWidget {
           buildCoverImage(
               animal[itemIndex]["image"].toString()),
           Padding(
-            padding: const EdgeInsetsDirectional.only(top: 300.0),
+            padding: EdgeInsetsDirectional.only(top: 300.h),
             child: SizedBox(
               height: double.infinity,
               width: double.infinity,
@@ -37,52 +39,36 @@ class DetailsScreen extends StatelessWidget {
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0), topRight: Radius.circular(50.0)),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(30.0, 25.0, 30.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(20.w, 15.h, 20.w, 10.h),
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         buildNameListTile(animal[itemIndex]["name"].toString(),
                             animal[itemIndex]["from"].toString()),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
+                        buildGap(8.h),
                         buildDetailsCardList(animal, itemIndex),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
+                        buildGap(15.h),
                         Text(
                           "About me",
                           style:
                               fontSourceSansPro.copyWith(color: colorLightGrey),
                         ),
-                        const SizedBox(
-                          height: 5.0,
-                        ),
+                        buildGap(5.h),
                         buildAboutText(animal[itemIndex]["about"].toString()),
-                        const SizedBox(
-                          height: 5.0,
-                        ),
+                        buildGap(5.h),
                         buildAboutText(animal[itemIndex]["about"].toString()),
-                        const SizedBox(
-                          height: 5.0,
-                        ),
+                        buildGap(5.h),
                         buildAboutText(animal[itemIndex]["about"].toString()),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
+                        buildGap(15.h),
                         Text(
                           "Photo Album",
                           style:
                               fontSourceSansPro.copyWith(color: colorLightGrey),
                         ),
-                        const SizedBox(
-                          height: 5.0,
-                        ),
+                        buildGap(5.h),
                         buildPhotoAlbumList(animal,itemIndex),
-                        const SizedBox(
-                          height: 70.0,
-                        ),
+                        buildGap(70.h),
                       ],
                     ),
                   ),
