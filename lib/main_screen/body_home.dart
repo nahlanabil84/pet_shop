@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/main_screen/welcome_message_widget.dart';
 import 'package:pet_shop/styles.dart';
 
-import '../catsjson.dart';
-import '../dogsjson.dart';
+import '../cats_json.dart';
+import '../dogs_json.dart';
 import '../widgets/create_gap.dart';
 import '../widgets/header.dart';
 import 'animal_list_container.dart';
