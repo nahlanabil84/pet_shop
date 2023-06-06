@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pet_shop/styles.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({super.key});
@@ -42,9 +41,10 @@ class _CustomBottomNavigationBar extends State<CustomBottomNavigationBar>{
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        backgroundColor: colorWhite,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+
+        // backgroundColor: colorWhite,
+        // showSelectedLabels: false,
+        // showUnselectedLabels: false,
       );
     }
   }

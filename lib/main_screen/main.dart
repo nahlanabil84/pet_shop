@@ -1,8 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pet_shop/styles.dart';
+//import 'package:pet_shop/styles.dart';
 
+import 'package:pet_shop/theme.dart';
 import '../widgets/bottom_navigation_bar.dart';
 import 'body_home.dart';
 import 'body_cart.dart';
@@ -22,8 +23,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder: (BuildContext context, child) => const MaterialApp(
+      builder: (BuildContext context, child) => MaterialApp(
         home: MyHomePage(),
+        theme: AppTheme().buildThemeData(),
         debugShowCheckedModeBanner: false,
       ),
       designSize: const Size(375, 812),
@@ -40,7 +42,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  int _currentIndex = 0;
+  final int _currentIndex = 0;
   List<Widget> pages = [
     const HomeBodyWidget(),
     const CartBodyWidget(),
@@ -51,7 +53,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorBackground,
         body: pages.elementAt((_currentIndex),),
         bottomNavigationBar: const CustomBottomNavigationBar(),
       ),

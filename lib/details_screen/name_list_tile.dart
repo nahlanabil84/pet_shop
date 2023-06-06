@@ -1,14 +1,14 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/styles.dart';
 
 import '../widgets/create_gap.dart';
 
-ListTile buildNameListTile(String animalName, String animalFrom) {
+ListTile buildNameListTile(String animalName, String animalFrom, BuildContext context) {
   return ListTile(
     title: Text(animalName,
-      style: fontSourceSansProBlack.copyWith(
-          color: colorDarkGrey, fontSize: 20.0),
+      style: Theme.of(context).textTheme.titleLarge
     ),
     subtitle: Padding(
       padding: EdgeInsets.only(top: 5.h),
@@ -21,8 +21,7 @@ ListTile buildNameListTile(String animalName, String animalFrom) {
           ),
           buildGap(5.h),
           Text(animalFrom,
-            style: fontSourceSansPro.copyWith(
-                color: colorLightGrey),
+            style: Theme.of(context).textTheme.bodyMedium
           ),
         ],
       ),

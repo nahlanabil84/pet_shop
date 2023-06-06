@@ -39,29 +39,18 @@ class WelcomeMessageWidget extends StatelessWidget {
                         children: [
                           Text(
                             "Hello ",
-                            style: fontSourceSansProLight
-                                .copyWith(
-                              fontSize: 18.sp,
-                              color: colorBlack,
-                            ),
+                            style: Theme.of(context).textTheme.displayMedium
                           ),
                           Text(
                             "Nahla 👋",
-                            style: fontSourceSansProBold
-                                .copyWith(
-                              fontSize: 18.sp,
-                              color: colorBlack,
-                            ),
+                            style: Theme.of(context).textTheme.displayLarge
                           )
                         ],
                       ),
                       buildGap(5.h),
                       Text(
                         "Ready for an amazing and lucky experience 🐈🐕‍",
-                        style: fontSourceSansPro.copyWith(
-                          fontSize: 16.sp,
-                          color: colorBlack,
-                        ),
+                        style: Theme.of(context).textTheme.displaySmall
                       ),
                     ]),
               ),

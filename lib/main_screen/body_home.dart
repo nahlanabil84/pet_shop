@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/main_screen/welcome_message_widget.dart';
-import 'package:pet_shop/styles.dart';
 
 import '../cats_json.dart';
 import '../dogs_json.dart';
@@ -41,8 +40,7 @@ class HomeBodyWidget extends StatelessWidget {
                     padding: EdgeInsets.only(left: 15.w),
                     child: Text(
                       "Dogs 🐕",
-                      style: fontSourceSansProBlack.copyWith(
-                          color: colorDarkGrey, fontSize: 20.sp),
+                      style: Theme.of(context).textTheme.titleLarge
                     ),
                   ),
                   buildGap(8.h),
@@ -52,8 +50,7 @@ class HomeBodyWidget extends StatelessWidget {
                     padding: EdgeInsets.only(left: 15.w),
                     child: Text(
                       "Cats 🐈",
-                      style: fontSourceSansProBlack.copyWith(
-                          color: colorDarkGrey, fontSize: 20.sp),
+                      style: Theme.of(context).textTheme.titleLarge
                     ),
                   ),
                   buildGap(8.h),

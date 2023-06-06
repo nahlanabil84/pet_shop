@@ -11,11 +11,6 @@ class TransparentAppBarWidget extends StatelessWidget implements PreferredSizeWi
     return Padding(
       padding: EdgeInsets.only(top: 20.h, left: 4.w),
       child: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.black, //change your color here
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
       ),
     );
   }

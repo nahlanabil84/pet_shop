@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/styles.dart';
 import 'package:pet_shop/details_screen/details.dart';
 
+import '../widgets/create_gap.dart';
+
 SizedBox buildItem(int index, List animal, BuildContext context) {
   return SizedBox(
     width: 150.w,
@@ -38,9 +40,7 @@ SizedBox buildItem(int index, List animal, BuildContext context) {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(
-                  height: 5.h,
-                ),
+                buildGap(5.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,10 +56,7 @@ SizedBox buildItem(int index, List animal, BuildContext context) {
                             vertical: 3.h, horizontal: 10.w),
                         child: Text(
                           animal[index]["type"].toString(),
-                          style: fontSourceSansProBold.copyWith(
-                            fontSize: 10.sp,
-                            color: colorOrange,
-                          ),
+                          style: Theme.of(context).textTheme.titleSmall
                         ),
                       ),
                     ),
@@ -74,20 +71,19 @@ SizedBox buildItem(int index, List animal, BuildContext context) {
                   padding: EdgeInsets.only(left: 3.w),
                   child: Text(
                     animal[index]["name"].toString(),
-                    style: fontSourceSansProBlack.copyWith(
-                        color: colorDarkGrey, fontSize: 16.sp),
+                    style: Theme.of(context).textTheme.titleMedium
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 3.w),
                   child: Text(
                     animal[index]["date"].toString(),
-                    style: fontSourceSansPro.copyWith(
-                        color: colorLightGrey, fontSize: 14.sp),
+                    style: Theme.of(context).textTheme.bodySmall
                   ),
                 ),
               ],
-            )),
+            ),
+        ),
       ),
     ),
   );

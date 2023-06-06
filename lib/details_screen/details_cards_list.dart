@@ -1,18 +1,19 @@
+
 import 'package:flutter/material.dart';
 import 'package:pet_shop/styles.dart';
 
-Row buildDetailsCardList(List animal, int itemIndex){
+Row buildDetailsCardList(List animal, int itemIndex, BuildContext context){
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-      buildDetailsCard(animal[itemIndex]["age"].toString(), "Age"),
-      buildDetailsCard(animal[itemIndex]["color"].toString(), "Color"),
-      buildDetailsCard(animal[itemIndex]["weight"].toString(), "Weight"),
+      buildDetailsCard(animal[itemIndex]["age"].toString(), "Age", context),
+      buildDetailsCard(animal[itemIndex]["color"].toString(), "Color", context),
+      buildDetailsCard(animal[itemIndex]["weight"].toString(), "Weight", context),
     ],
   );
 }
 
-Card buildDetailsCard(String detail, String title) {
+Card buildDetailsCard(String detail, String title, BuildContext context) {
   return Card(
     elevation: 0.0,
     color: colorLightOrange,
@@ -30,13 +31,11 @@ Card buildDetailsCard(String detail, String title) {
           children: [
             Text(
               detail,
-              style: fontSourceSansProBold.copyWith(
-                  color: colorOrange),
+              style: Theme.of(context).textTheme.labelMedium
             ),
             Text(
               title,
-              style: fontSourceSansPro.copyWith(
-                  color: colorLightGrey),
+              style: Theme.of(context).textTheme.headlineSmall
             ),
           ],
         ),

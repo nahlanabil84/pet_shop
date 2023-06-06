@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pet_shop/styles.dart';
 
@@ -13,21 +12,13 @@ class ExtendedFloatingActionButtonWidget extends StatelessWidget {
     return FloatingActionButton.extended(
       label: Text(
         "Add To Cart",
-        style: fontSourceSansProBold.copyWith(color: colorLightOrange),
+        style: Theme.of(context).textTheme.labelLarge,
       ),
       icon: SvgPicture.asset(
         'assets/cart_selected.svg',
         color: colorLightOrange,
       ),
       onPressed: () {},
-      backgroundColor: colorDarkGrey,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(10.r),
-        ),
-      ),
-      extendedPadding:
-      EdgeInsets.symmetric(vertical: 15.h, horizontal: 25.w),
     );
   }
 }

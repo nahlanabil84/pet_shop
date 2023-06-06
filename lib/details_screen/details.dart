@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pet_shop/styles.dart';
 
 import '../widgets/create_gap.dart';
 import 'details_cards_list.dart';
@@ -35,8 +34,11 @@ class DetailsScreen extends StatelessWidget {
               width: double.infinity,
               child: Card(
                 margin: const EdgeInsets.all(0.0),
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0), topRight: Radius.circular(50.0)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50.r),
+                    topRight: Radius.circular(50.r),
+                  ),
                 ),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(20.w, 15.h, 20.w, 10.h),
@@ -45,26 +47,24 @@ class DetailsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         buildNameListTile(animal[itemIndex]["name"].toString(),
-                            animal[itemIndex]["from"].toString()),
+                            animal[itemIndex]["from"].toString(), context),
                         buildGap(8.h),
-                        buildDetailsCardList(animal, itemIndex),
+                        buildDetailsCardList(animal, itemIndex, context),
                         buildGap(15.h),
                         Text(
                           "About me",
-                          style:
-                              fontSourceSansPro.copyWith(color: colorLightGrey),
+                          style: Theme.of(context).textTheme.headlineSmall
                         ),
                         buildGap(5.h),
-                        buildAboutText(animal[itemIndex]["about"].toString()),
+                        buildAboutText(animal[itemIndex]["about"].toString(), context),
                         buildGap(5.h),
-                        buildAboutText(animal[itemIndex]["about"].toString()),
+                        buildAboutText(animal[itemIndex]["about"].toString(), context),
                         buildGap(5.h),
-                        buildAboutText(animal[itemIndex]["about"].toString()),
+                        buildAboutText(animal[itemIndex]["about"].toString(), context),
                         buildGap(15.h),
                         Text(
                           "Photo Album",
-                          style:
-                              fontSourceSansPro.copyWith(color: colorLightGrey),
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         buildGap(5.h),
                         buildPhotoAlbumList(animal,itemIndex),
