@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/styles.dart';
 
-import '../widgets/create_gap.dart';
+import '../common_widgets/create_gap.dart';
 
 ListTile buildNameListTile(String animalName, String animalFrom, BuildContext context) {
   return ListTile(

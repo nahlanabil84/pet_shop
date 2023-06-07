@@ -1,10 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-//import 'package:pet_shop/styles.dart';
 
 import 'package:pet_shop/theme.dart';
-import '../widgets/bottom_navigation_bar.dart';
+import '../common_widgets/bottom_navigation_bar.dart';
 import 'body_home.dart';
 import 'body_cart.dart';
 import 'body_profile.dart';

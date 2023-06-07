@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../widgets/create_gap.dart';
+import '../common_widgets/create_gap.dart';
 import 'details_cards_list.dart';
 import 'photo_album_list.dart';
 import 'extended_floating_action_button.dart';

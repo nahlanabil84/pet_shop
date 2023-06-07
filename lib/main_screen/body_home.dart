@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/main_screen/welcome_message_widget.dart';
 
 import '../cats_json.dart';
+import '../common_widgets/create_gap.dart';
+import '../common_widgets/header.dart';
 import '../dogs_json.dart';
-import '../widgets/create_gap.dart';
-import '../widgets/header.dart';
 import 'animal_list_container.dart';
 
 class HomeBodyWidget extends StatelessWidget {

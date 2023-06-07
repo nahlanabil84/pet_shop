@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_shop/styles.dart';
 import 'package:pet_shop/details_screen/details.dart';
 
-import '../widgets/create_gap.dart';
+import '../common_widgets/create_gap.dart';
 
 SizedBox buildItem(int index, List animal, BuildContext context) {
   return SizedBox(
